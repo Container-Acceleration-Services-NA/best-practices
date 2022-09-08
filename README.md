@@ -1,3 +1,3 @@
 # best-practices
 
-- Collection of best practices
+- Collection of Cloud native Development best practices
