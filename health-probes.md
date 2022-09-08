@@ -4,7 +4,7 @@ If not configured well accounting for variance within the application, they can 
  
 - Summary. Kubelet uses;
 1. Startup probe - to check if the container application has started. Stops when its succeeds once. If it fails, the container is killed and subject to pod's ```restartPolicy```. It disables the liveness and readiness probes until it succeeds
-2. Readiness probe -  to check if the container application is available to receive traffic. If it fails traffic will not be routed by the service to the container. It runs through out the lifetime of the application on every ```periodSeconds````  .
+2. Readiness probe -  to check if the container application is available to receive traffic. If it fails traffic will not be routed by the service to the container. It runs through out the lifetime of the application on every ```periodSeconds```  .
 3. Liveness probe - to check if the container application is in a healthy state and responsive. If the check fails it will restart the container.
 
 
