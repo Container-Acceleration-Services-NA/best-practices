@@ -16,6 +16,3 @@ If not configured well accounting for variance within the application, they can 
     - Make sure to account for temporary latency issues for example larger responses. It may be a good idea to have the probe timeout as long as the client timeout with a higher ```failureThreshold``` count. 
     - Should generally not be checking for dependencies and should be cheap and have consistent response times.
 
-https://blog.colinbreck.com/kubernetes-liveness-and-readiness-probes-how-to-avoid-shooting-yourself-in-the-foot/
-
-https://developers.redhat.com/blog/2020/11/10/you-probably-need-liveness-and-readiness-probes#what_if_i_don_t_specify_a_liveness_probe_
