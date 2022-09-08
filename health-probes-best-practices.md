@@ -1,9 +1,9 @@
-# Best Practices for Openshift Health Check/Probes
+# Best Practices for Kubernetes Health Check/Probes
 
 If not configured properly, accounting for variance within the application, these can cause issues for your service and impact availability.
  
 - Summary. 
-1. Startup probe - checks if the container application has started. Stops when its succeeds once. If it fails, the container is killed and subject to pod's ```restartPolicy```. It disables the liveness and readiness probes until it succeeds
+1. Startup probe - checks if the container application has started. Stops at the first success. If it fails, the container is killed and subject to pod's ```restartPolicy```. It disables the liveness and readiness probes until it succeeds
 2. Readiness probe -  checks if the container application is available/ready to receive requests. If it fails traffic will not be routed by the service to the container. It runs through out the lifetime of the application on every ```periodSeconds```.If it failes, it does not restart your application but will take it off lb rotation.
     - increase the ```failureThreshold``` above the default count of 3 to avoid the probe failing prematurely due to temporary latency issues.
     - If it is checking for external dependencies make sure the ```timeoutSeconds``` is long enough.
