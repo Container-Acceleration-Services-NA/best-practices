@@ -1,9 +1,9 @@
 # Dockerfile Best Practices
 
 ### Here are some best practices for writing dockerfiles that are;
-    - Maintainable
-    - Secure
-    - Produce small image size
+- Maintainable
+- Secure
+- Produce small image size
 
 
 1. Always use the most current release base upstream image for security reasons. 

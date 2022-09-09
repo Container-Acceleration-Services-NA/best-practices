@@ -6,7 +6,6 @@
 2. Do Not Use CPU Limits
     > This means that your application will always get additional CPU if needed, however it will not use up CPU needed by others as long as they have CPU requests which guarantees that they will be allocated what they requested for. CPU Limits waste allocatable CPU. 
 
-
 ## Memory
 - Because Memory is non compressible and cannot be reclaimed after its been allocated unless the Pod is killed
 1. Use Memory Limits
