@@ -10,7 +10,7 @@ If configured poorly without accounting for variance within the application, hea
     - Make sure that the ```initialDelaySeconds``` is accounts for ```readinessProbe``` so that the probe does not start before the container has been marked as ready.
     - Set the ```initialDelaySeconds``` in such a way as to account for variance in startup times. It should be long enough for variable startup times to avoid the container being caught in a restart loop caused by the probe itsel causing a self inflicted DOS.
     - Make sure to account for temporary latency issues to avoid unnecessary failures. If you set probe ```timeoutSeconds``` then make it as long as the client timeout with a higher ```failureThreshold``` count. 
-    - Should be a trivial predictable call with consistent response times and does not include checking for external services or dependencies.
+    - Should be a predictable call with consistent response times and does not include checking for external services or dependencies.
 
 
 - Do not use the same endpoint for both the ```readinessProbe``` and ```livenessProbe```
