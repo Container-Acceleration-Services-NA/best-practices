@@ -16,3 +16,7 @@ If configured poorly without accounting for variance within the application, hea
 
 
 - Do not use the same endpoint for both the ```readinessProbe``` and ```livenessProbe```
+
+- Sources
+    - https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#container-probes
+    - https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/
