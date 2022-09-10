@@ -20,3 +20,4 @@ If configured poorly without accounting for variance within the application, hea
 - Sources
     - https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#container-probes
     - https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/
+    - https://github.com/kubernetes/design-proposals-archive/blob/8da1442ea29adccea40693357d04727127e045ed/node/resource-qos.md#compressible-resource-guaranteess
