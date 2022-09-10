@@ -3,7 +3,7 @@
 If configured poorly without accounting for variance within the application, health probes can cause issues for your service and impact availability.
 
 1. Startup probe - checks if the container application has started. It disables the liveness and readiness probes until it succeeds. Stops at the first success. If it fails, the container is killed and subject to pod's ```restartPolicy```. 
-    - Use this when you have an application with a long startup or initialization time. 
+    - Use this when you have an application with a long startup or initialization time that makes it hard to properly configure liveness and readiness probes.
     - Make sure the ```failureThreshold * periodSeconds```[is long enough to cover the applications worse case startup time.](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#define-startup-probes)
 2. Readiness probe -  checks if the container application is available/ready to receive requests. If it fails traffic will not be routed by the service to the container. It runs through out the lifetime/lifecycle of the container application and runs every ```periodSeconds```.If it failes, it does not restart your application but will take it off service/lb rotation.
     - increase the ```failureThreshold``` above the default count of 3 to avoid the probe failing prematurely due to temporary latency issues.
